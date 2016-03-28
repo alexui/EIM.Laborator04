@@ -12,8 +12,113 @@
     tools:context="com.politehnica.alexbudau.contactsmanager.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/showFieldsButton"
+        android:textAllCaps="false"
+        android:id="@+id/showButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showButton"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nameEditText"
+            android:id="@+id/nameEditText"
+            android:text="Alexandre" />
+
+        <EditText
+            android:hint="@string/numberEditText"
+            android:layout_width="match_parent"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberEditText" />
+
+        <EditText
+            android:hint="@string/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailEditText"
+            android:text="alex@yahoo.com" />
+
+        <EditText
+            android:hint="@string/addressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addressEditText"
+            android:text="StefanCelMare" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saveButton"
+                android:id="@+id/saveButton" />
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancelButton"
+                android:id="@+id/cancelButton" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <EditText
+            android:hint="@string/jobEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/jobEditText"
+            android:text="programmer" />
+
+        <EditText
+            android:hint="@string/compEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/companyEditText"
+            android:text="INGServices" />
+
+        <EditText
+            android:hint="@string/websiteEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/websiteEditText"
+            android:layout_gravity="center_horizontal"
+            android:text="alex.ro" />
+
+        <EditText
+            android:hint="@string/imEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imEditText"
+            android:text="alex_hacker"
+            android:visibility="gone" />
+    </LinearLayout>
+
 </RelativeLayout>
